@@ -27,22 +27,25 @@ const TableHeader = styled.header`
   color: var(--color-grey-600);
   padding: 1.6rem 2.4rem;
 `;
-
 function CabinTable() {
   const {
+    data: allCabins,
     isLoading,
-    data: cabins,
     error,
   } = useQuery({
     queryKey: ["cabins"],
     queryFn: getCabins,
   });
 
-  if (isLoading) return <Spinner />;
-
+  if (isLoading) {
+    return <Spinner />;
+  }
+  if (error) {
+    return <p>Error fetching cabins: {error.message}</p>;
+  }
   return (
-    <Table role="table">
-      <TableHeader role="row">
+    <Table>
+      <TableHeader>
         <div></div>
         <div>Cabin</div>
         <div>Capacity</div>
@@ -50,8 +53,8 @@ function CabinTable() {
         <div>Discount</div>
         <div></div>
       </TableHeader>
-      {cabins.map((cabin) => (
-        <CabinRow cabin={cabin} key={cabin.id} />
+      {allCabins.map((cabin) => (
+        <CabinRow key={cabin.id} cabin={cabin}></CabinRow>
       ))}
     </Table>
   );
