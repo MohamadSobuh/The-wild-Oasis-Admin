@@ -30,26 +30,26 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
       editCabin(
         { newCabinData: { ...data, image }, id: editId },
         {
-          onSuccess: () => {
+          onSuccess: (data) => {
             reset();
             onCloseModal?.();
           },
-        },
+        }
       );
     else
       createCabin(
         { ...data, image: image },
         {
-          onSuccess: () => {
+          onSuccess: (data) => {
             reset();
             onCloseModal?.();
           },
-        },
+        }
       );
   }
 
   function onError(errors) {
-    console.log(errors);
+    // console.log(errors);
   }
 
   return (
@@ -89,7 +89,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           id="regularPrice"
           disabled={isWorking}
           {...register("regularPrice", {
-            valueAsNumber: true,
             required: "This field is required",
             min: {
               value: 1,
@@ -106,7 +105,6 @@ function CreateCabinForm({ cabinToEdit = {}, onCloseModal }) {
           disabled={isWorking}
           defaultValue={0}
           {...register("discount", {
-            valueAsNumber: true,
             required: "This field is required",
             validate: (value) =>
               value <= getValues().regularPrice ||
