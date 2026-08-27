@@ -63,6 +63,7 @@ function CreateCabinForm() {
           type="number"
           id="regularPrice"
           {...register("regularPrice", {
+            valueAsNumber: true,
             required: "This field is required",
             min: { value: 0, message: "Price must be a positive number" },
           })}
