@@ -31,9 +31,7 @@ function CreateCabinForm() {
     mutate({ ...data, image: data.image[0] });
   }
 
-  function onError(errors) {
-    // console.log(errors);
-  }
+  function onError() {}
 
   return (
     <Form onSubmit={handleSubmit(onSubmit, onError)}>

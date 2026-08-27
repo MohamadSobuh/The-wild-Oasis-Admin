@@ -10,7 +10,7 @@ import Spinner from "../../ui/Spinner";
 
 import { useMoveBack } from "../../hooks/useMoveBack";
 import { useBooking } from "../bookings/useBooking";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Checkbox from "../../ui/Checkbox";
 import { formatCurrency } from "../../utils/helpers";
 import { useCheckin } from "./useCheckin";
@@ -30,7 +30,11 @@ function CheckinBooking() {
   const { booking, isLoading } = useBooking();
   const { settings, isLoading: isLoadingSettings } = useSettings();
 
-  useEffect(() => setConfirmPaid(booking?.isPaid ?? false), [booking]);
+  const [prevBookingId, setPrevBookingId] = useState(null);
+  if (booking && booking.id !== prevBookingId) {
+    setPrevBookingId(booking.id);
+    setConfirmPaid(booking.isPaid ?? false);
+  }
 
   const moveBack = useMoveBack();
   const { checkin, isCheckingIn } = useCheckin();
