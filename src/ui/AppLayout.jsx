@@ -18,6 +18,7 @@ const Main = styled.main`
 
 const Container = styled.div`
   max-width: 120rem;
+  min-height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

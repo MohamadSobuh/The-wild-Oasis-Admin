@@ -4,6 +4,12 @@ const Row = styled.div`
   display: flex;
 
   ${(props) =>
+    props.align === "center" &&
+    css`
+      align-items: center;
+    `}
+
+  ${(props) =>
     props.type === "horizontal" &&
     css`
       justify-content: space-between;
@@ -15,6 +21,12 @@ const Row = styled.div`
     css`
       flex-direction: column;
       gap: 1.6rem;
+    `}
+    ${(props) =>
+    props.type === "margin" &&
+    css`
+      gap: 1.6rem;
+      margin-top: 10px;
     `}
 `;
 
