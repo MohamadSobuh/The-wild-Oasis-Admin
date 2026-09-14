@@ -1,16 +1,12 @@
-# React + Vite
+https://the-wild-oasis-admin-mohamad-sobuh.netlify.app
+i am set a default email and password just login
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1902" height="929" alt="image" src="https://github.com/user-attachments/assets/23376551-959b-4f80-8653-1f15724737be" />
+<img width="1898" height="927" alt="image" src="https://github.com/user-attachments/assets/2977a93a-b150-4f06-b85a-972485224003" />
+<img width="1901" height="924" alt="image" src="https://github.com/user-attachments/assets/9fd6e53f-0e7a-4478-97a1-aa4768f7251a" />
+<img width="1900" height="926" alt="image" src="https://github.com/user-attachments/assets/bd253eb4-3bda-4d90-aaf7-c3f2c1b0e134" />
+<img width="1250" height="585" alt="image" src="https://github.com/user-attachments/assets/fef25ca7-0b04-492a-aa5e-4a387d970fce" />
+<img width="1909" height="932" alt="image" src="https://github.com/user-attachments/assets/841cf133-0de8-4733-9804-f2e0dd7d27fd" />
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
