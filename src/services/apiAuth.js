@@ -12,7 +12,14 @@ export async function signup({ fullName, email, password }) {
     },
   });
 
-  if (error) throw new Error(error.message);
+  if (error) {
+    if (error.status === 429) {
+      throw new Error(
+        "Too many signup attempts. Wait a few minutes before trying again, or use a different email address.",
+      );
+    }
+    throw new Error(error.message);
+  }
 
   return data;
 }
